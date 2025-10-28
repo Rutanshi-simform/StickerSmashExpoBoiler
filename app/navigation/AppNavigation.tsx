@@ -3,7 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import { AppEnvConst, ROUTES } from '../constants';
 import { useTheme } from '../hooks';
-import { DetailsScreen, HomeScreen, SigninScreen } from '../modules';
+import { HomeScreen } from '../modules';
 import { Colors } from '../theme';
 import { getLinkConfiguration, navigationRef } from '../utils';
 
@@ -67,8 +67,6 @@ const AppContainer = () => {
     >
       <RootStack.Navigator>
         <RootStack.Screen name={ROUTES.Home} component={HomeScreen} />
-        <RootStack.Screen name={ROUTES.SignIn} component={SigninScreen} />
-        <RootStack.Screen name={ROUTES.Details} component={DetailsScreen} />
       </RootStack.Navigator>
     </NavigationContainer>
   );

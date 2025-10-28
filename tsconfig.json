@@ -1,20 +1,12 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "lib": [
-      "es2018",
-      "es2019",
-      "es2020",
-      "es2023"
-    ],
+    "lib": ["es2018", "es2019", "es2020", "es2023"],
     "jsx": "react-native",
     "experimentalDecorators": true,
     "module": "esnext",
-    "moduleResolution": "node10",
-    "typeRoots": [
-      "app/types",
-      "node"
-    ],
+    "moduleResolution": "bundler",
+    "typeRoots": ["app/types", "node"],
     "resolveJsonModule": true,
     "allowJs": true,
     "noEmit": true,
@@ -29,16 +21,8 @@
     "noUnusedParameters": true,
     "skipLibCheck": true
   },
-  "include": [
-    "app",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts"
-  ],
-  "filesGlob": [
-    "typings/index.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
+  "include": ["app", ".expo/types/**/*.ts", "expo-env.d.ts"],
+  "filesGlob": ["typings/index.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": [
     "node_modules",
     "babel.config.js",

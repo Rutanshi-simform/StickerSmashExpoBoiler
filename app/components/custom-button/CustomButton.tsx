@@ -1,4 +1,4 @@
-import { debounce } from 'lodash';
+import debounce from 'lodash/debounce';
 import React from 'react';
 import { Pressable } from 'react-native';
 import { useTheme } from '../../hooks';
@@ -50,12 +50,12 @@ const CustomButton = ({
 
   return (
     <Pressable
-      style={({ pressed }) => [
+      style={(state) => [
         buttonStyles.defaultButtonStyle,
         variantStyles[variant],
-        pressed && buttonStyles.pressedStyle,
+        state.pressed && buttonStyles.pressedStyle,
         disabled && buttonStyles.disabledButtonStyle,
-        typeof style === 'function' ? style({ pressed }) : style
+        typeof style === 'function' ? style(state) : style
       ]}
       disabled={loading || disabled}
       onPress={handleOnPress}
