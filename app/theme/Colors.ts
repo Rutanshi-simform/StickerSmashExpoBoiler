@@ -15,7 +15,10 @@ type Keys =
   | 'red'
   | 'darkBlue'
   | 'transparent'
-  | 'green';
+  | 'green'
+  | 'yellow'
+  | 'darkGray'
+  | 'lightGray';
 
 // Define common keys for colors
 type CommonKeys = 'white' | 'black' | 'transparentBlack' | 'transparentWhite';
@@ -32,7 +35,10 @@ const themeColors: Record<Keys, string> = {
   red: '#DD2C2C',
   darkBlue: '#374dfc',
   transparent: 'transparent',
-  green: '#34A853'
+  green: '#34A853',
+  yellow: '#ffd33d',
+  darkGray: '#25292e',
+  lightGray: '#464C55'
 };
 
 // Define common colors with corresponding color values
