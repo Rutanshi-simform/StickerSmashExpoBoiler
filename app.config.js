@@ -13,7 +13,7 @@ const defineConfig = ({ config }) => {
     version: '1.0.0',
     orientation: 'portrait',
     icon: './app/assets/icons/appIcon.png',
-    scheme: 'StickerSmashExpoBoiler',
+    scheme: ['stickersmashexpoboiler'],
     userInterfaceStyle: 'automatic',
     newArchEnabled: true,
     splash: {
@@ -71,6 +71,12 @@ const defineConfig = ({ config }) => {
       eas: {
         projectId: 'f3048f2c-4e9c-4277-bfbb-b6f4f98645f7'
       }
+    },
+    runtimeVersion: {
+      policy: 'appVersion'
+    },
+    updates: {
+      url: 'https://u.expo.dev/f3048f2c-4e9c-4277-bfbb-b6f4f98645f7'
     }
   };
 };

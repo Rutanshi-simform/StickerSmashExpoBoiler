@@ -19,14 +19,16 @@
       "developmentClient": true,
       "ios": {
         "simulator": true
-      }
+      },
+      "channel": "development"
     },
     "preview": {
       "extends": "base",
       "distribution": "internal",
       "env": {
         "NODE_ENV": "preview"
-      }
+      },
+      "channel": "preview"
     },
     "production": {
       "extends": "base",
@@ -34,7 +36,8 @@
       "env": {
         "NODE_ENV": "production"
       },
-      "autoIncrement": true
+      "autoIncrement": true,
+      "channel": "production"
     }
   },
   "submit": {

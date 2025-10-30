@@ -105,7 +105,7 @@ const HomeScreen: FC = (): React.ReactElement => {
         </View>
       ) : (
         <View style={styles.footerContainer}>
-          <Button theme="primary" label="Choose a photo" onPress={pickImageAsync} />
+          <Button theme="primary" label="select a photo" onPress={pickImageAsync} />
           <Button label="Use this photo" onPress={() => setShowAppOptions(true)} />
         </View>
       )}
