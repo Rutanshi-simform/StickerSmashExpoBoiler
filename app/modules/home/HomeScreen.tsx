@@ -11,8 +11,10 @@ import {
   EmojiPicker,
   EmojiSticker,
   IconButton,
-  ImageViewer
+  ImageViewer,
+  Text
 } from '../../components';
+import { Colors } from '../../theme';
 import styles from './HomeStyles';
 
 /**
@@ -91,6 +93,7 @@ const HomeScreen: FC = (): React.ReactElement => {
     <View style={styles.container}>
       <View style={styles.imageContainer}>
         <View ref={imageRef} collapsable={false}>
+          <Text style={{ color: Colors.light.white }}>Changes from dev</Text>
           <ImageViewer imgSource={Images.PlaceholderImage} selectedImage={selectedImage} />
           {pickedEmoji && <EmojiSticker imageSize={40} stickerSource={pickedEmoji} />}
         </View>
