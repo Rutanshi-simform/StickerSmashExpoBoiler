@@ -62,7 +62,8 @@ const defineConfig = ({ config }) => {
         {
           iosPermissions: ['Camera']
         }
-      ]
+      ],
+      ['./plugins/withPlugin', { message: 'Custom message from app.config.ts' }]
     ],
     experiments: {
       typedRoutes: true
