@@ -23,6 +23,7 @@ const defineConfig = ({ config }) => {
     ios: {
       bundleIdentifier: bundleIdentifier,
       infoPlist: {
+        ITSAppUsesNonExemptEncryption: false,
         NSCameraUsageDescription: 'This app requires to access your photo library'
       }
     },
@@ -62,7 +63,6 @@ const defineConfig = ({ config }) => {
           iosPermissions: ['Camera']
         }
       ]
-      
     ],
     experiments: {
       typedRoutes: true

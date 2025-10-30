@@ -25,7 +25,9 @@ export const getEnvironmentConfig = (environment) => {
  * @param {string} packageID - The application package identifier.
  * @returns {string} The proguard rules as a string.
  */
-export const defineProGuardRules = (bundleIdentifier) => `-keep,allowobfuscation @interface com.facebook.proguard.annotations.DoNotStrip
+export const defineProGuardRules = (
+  bundleIdentifier
+) => `-keep,allowobfuscation @interface com.facebook.proguard.annotations.DoNotStrip
 
 # Do not strip any method/class that is annotated with @DoNotStrip
 -keep @com.facebook.proguard.annotations.DoNotStrip class *
