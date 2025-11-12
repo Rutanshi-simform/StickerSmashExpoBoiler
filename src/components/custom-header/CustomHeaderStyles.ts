@@ -10,7 +10,7 @@ const styles = (theme: ThemeMode) =>
   StyleSheet.create({
     ...ApplicationStyles(theme),
     container: {
-      backgroundColor: Colors[theme]?.white,
+      backgroundColor: Colors[theme]?.secondary,
       width: '100%'
     },
     rightAndLeftView: {

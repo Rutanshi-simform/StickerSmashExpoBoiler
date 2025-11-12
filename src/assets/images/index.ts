@@ -9,5 +9,6 @@ export default {
   Emoji3: require('./emoji3.png'),
   Emoji4: require('./emoji4.png'),
   Emoji5: require('./emoji5.png'),
-  Emoji6: require('./emoji6.png')
+  Emoji6: require('./emoji6.png'),
+  Avatar: require('./avatar.png')
 };

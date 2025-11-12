@@ -10,3 +10,5 @@ export * from './image-viewer';
 export * from './button';
 export * from './circle-button';
 export * from './emoji-list';
+export * from './customModal';
+export * from './customCameraView';

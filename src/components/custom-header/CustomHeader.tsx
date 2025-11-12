@@ -57,12 +57,16 @@ export default function CustomHeader({
         >
           {title}
         </Text>
-        <View style={styles.rightAndLeftView} onLayout={handleLeftLayout}>
-          {customLeftView && customLeftView}
-        </View>
-        <View style={styles.rightAndLeftView} onLayout={handleRightLayout}>
-          {customRightView && customRightView}
-        </View>
+        {customLeftView && (
+          <View style={styles.rightAndLeftView} onLayout={handleLeftLayout}>
+            {customLeftView}
+          </View>
+        )}
+        {customRightView && (
+          <View style={styles.rightAndLeftView} onLayout={handleRightLayout}>
+            {customRightView}
+          </View>
+        )}
       </View>
     </View>
   );

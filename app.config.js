@@ -12,12 +12,12 @@ const defineConfig = ({ config }) => {
     slug: 'stickersmashexpoboiler',
     version: '1.0.0',
     orientation: 'portrait',
-    icon: './app/assets/icons/appIcon.png',
+    icon: './src/assets/icons/appIcon.png',
     scheme: ['stickersmashexpoboiler'],
     userInterfaceStyle: 'automatic',
     newArchEnabled: true,
     splash: {
-      image: './app/assets/images/splashScreen.png',
+      image: './src/assets/images/splashScreen.png',
       resizeMode: 'contain'
     },
     ios: {
@@ -29,7 +29,7 @@ const defineConfig = ({ config }) => {
     },
     android: {
       adaptiveIcon: {
-        foregroundImage: './app/assets/icons/adaptiveIcon.png',
+        foregroundImage: './src/assets/icons/adaptiveIcon.png',
         backgroundColor: '#ffffff'
       },
       package: bundleIdentifier,
@@ -44,6 +44,14 @@ const defineConfig = ({ config }) => {
       'expo-asset',
       'expo-font',
       'expo-router',
+      [
+        'expo-camera',
+        {
+          cameraPermission: 'Allow $(PRODUCT_NAME) to access your camera',
+          microphonePermission: 'Allow $(PRODUCT_NAME) to access your microphone',
+          recordAudioAndroid: true
+        }
+      ],
       [
         'expo-build-properties',
         {
