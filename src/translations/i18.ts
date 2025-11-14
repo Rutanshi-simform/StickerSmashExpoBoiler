@@ -1,23 +1,32 @@
 import { getLocales } from 'expo-localization';
 import i18n, { use } from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import { MMKV } from 'react-native-mmkv';
 import MMKVKeys from '../constants/MMKVKeys';
 import en from './en.json';
-
-const storage = new MMKV();
+import { storage } from '../services';
 
 const LANGUAGE_DETECTOR = {
   type: 'languageDetector',
   async: true,
   detect: (callback: (language?: string | null) => void) => {
-    const deviceLang = getLocales()[0].languageCode;
-    const language = storage.getString(MMKVKeys.appLanguage);
-    callback(language ?? deviceLang);
+    try {
+      const deviceLang = getLocales()[0].languageCode;
+      const language = storage.getString(MMKVKeys.appLanguage);
+      callback(language ?? deviceLang);
+    } catch (error) {
+      try {
+        const deviceLang = getLocales()[0]?.languageCode || 'en';
+        callback(deviceLang);
+      } catch {
+        callback('en');
+      }
+    }
   },
   init: () => {},
   cacheUserLanguage: (language: string) => {
-    storage.set(MMKVKeys.appLanguage, language);
+    try {
+      storage.set(MMKVKeys.appLanguage, language);
+    } catch (e) {}
   }
 };
 

@@ -37,7 +37,7 @@ const defineConfig = ({ config }) => {
     },
     web: {
       bundler: 'metro',
-      output: 'static'
+      output: 'server'
     },
     plugins: [
       'expo-localization',
