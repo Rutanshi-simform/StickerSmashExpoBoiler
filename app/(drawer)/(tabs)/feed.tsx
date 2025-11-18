@@ -1,7 +1,7 @@
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { useNavigation } from 'expo-router';
 import React from 'react';
-import { View, Text, StyleSheet, Pressable } from 'react-native';
+import { View, Text, StyleSheet, Pressable, Button } from 'react-native';
 import { CustomHeader } from '../../../src/components';
 
 const styles = StyleSheet.create({
@@ -57,7 +57,6 @@ const Feed = () => {
           <MaterialIcons name="menu" size={30} color="black" onPress={handleOpenDrawer} />
         }
       />
-
       <Text style={{ fontSize: 20 }}>Deployment of api</Text>
       <Pressable onPress={fetchGreeting}>
         <Text style={{ fontSize: 18, marginVertical: 10 }}>GET api/greeting</Text>

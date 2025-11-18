@@ -1,10 +1,10 @@
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { Image } from 'expo-image';
 import { Link, useNavigation } from 'expo-router';
 import React from 'react';
 import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
 import { CustomHeader } from '../../../src/components';
 import { ProductData } from '../../../src/constants';
-import { Image } from 'expo-image';
 
 /**
  *
@@ -21,6 +21,11 @@ const Home = () => {
     navigation.openDrawer();
   };
 
+  /**
+   *
+   * @param param0
+   * @returns
+   */
   const RenderItem = ({ item }: any) => {
     return (
       <Pressable style={{ borderWidth: 1, borderRadius: 5, marginBottom: 10 }}>
