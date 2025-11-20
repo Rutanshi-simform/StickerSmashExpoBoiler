@@ -26,6 +26,13 @@ class MyModule : Module() {
     // The module will be accessible from `requireNativeModule('MyModule')` in JavaScript.
     Name("MyModule")
 
+    View(MyModuleView::class) {
+      // Define view props here if needed
+      Prop("url") { view: MyModuleView, url: URL? ->
+        view.webView.loadUrl(url.toString())
+      }
+    }
+
     Events("onChangeTheme")
 
     // Defines constant property on the module.

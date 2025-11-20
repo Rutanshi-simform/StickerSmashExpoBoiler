@@ -1,13 +1,18 @@
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { useNavigation } from 'expo-router';
 import React from 'react';
-import { View, Text, StyleSheet, Pressable, Button } from 'react-native';
+import { View, Text, StyleSheet, Pressable } from 'react-native';
+import { MyModuleView } from '../../../modules/my-module';
 import { CustomHeader } from '../../../src/components';
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'center',
     flex: 1
+  },
+  webViewContainer: {
+    height: '50%',
+    marginVertical: 10,
+    width: '100%'
   }
 });
 
@@ -57,6 +62,7 @@ const Feed = () => {
           <MaterialIcons name="menu" size={30} color="black" onPress={handleOpenDrawer} />
         }
       />
+      <MyModuleView style={styles.webViewContainer} url={'https://reactnative.dev/'} />
       <Text style={{ fontSize: 20 }}>Deployment of api</Text>
       <Pressable onPress={fetchGreeting}>
         <Text style={{ fontSize: 18, marginVertical: 10 }}>GET api/greeting</Text>

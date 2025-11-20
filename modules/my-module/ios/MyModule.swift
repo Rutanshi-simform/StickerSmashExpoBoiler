@@ -10,6 +10,16 @@ public class MyModule: Module {
     // The module will be accessible from `requireNativeModule('MyModule')` in JavaScript.
     Name("MyModule")
 
+    View(MyModuleView.self) {
+      // Define view props here if needed
+      Prop("url") { (view, url: URL) in
+        if view.webView.url != url {
+          let urlRequest = URLRequest(url: url)
+          view.webView.load(urlRequest)
+        }
+      } 
+    }
+
     // Defines constant property on the module.
     Constant("PI") {
       Double.pi
